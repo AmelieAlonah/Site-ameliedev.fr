@@ -10,9 +10,9 @@ jobs:
             - name: Load private SSH key
               uses: webfactory/ssh-agent@v0.5.3
               with:
-                  ssh-private-key: ${{ SSH_USER }}
+                  ssh-private-key: ${{ secrets.SSH_USER }}
             - name: Atomic Deploy
               run: |
-                  ssh ${{ SSH_USER }}${{ SSH_HOST }} << EOF
+                  ssh ${{ secrets.SSH_USER }}${{ secrets.SSH_HOST }} << EOF
                     whoami
                   EOF
