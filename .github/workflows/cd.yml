@@ -7,14 +7,12 @@ jobs:
         runs-on: ubuntu-latest
         continue-on-error: false
         steps:
-            - uses: actions/checkout@v2
             - name: Load private SSH key
               uses: webfactory/ssh-agent@v0.5.3
               with:
-                ssh-private-key: ${{ SSH_PRIVATE_KEY }}
-
+                  ssh-private-key: ${{ SSH_USER }}
             - name: Atomic Deploy
               run: |
-                 ssh ${{ SSH_USER }}${{ SSH_HOST }} << EOF
+                  ssh ${{ SSH_USER }}${{ SSH_HOST }} << EOF
                     whoami
-                 EOF
+                  EOF
