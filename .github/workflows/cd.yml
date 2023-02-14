@@ -1,0 +1,20 @@
+name: Pipeline-CD
+on:
+    push:
+        branches: [ develop ]
+jobs:
+    cd:
+        runs-on: ubuntu-latest
+        continue-on-error: false
+        steps:
+            - uses: actions/checkout@v2
+            - name: Load private SSH key
+              uses: webfactory/ssh-agent@v0.5.3
+              with:
+                ssh-private-key: ${{ secrets. secrets.KEY }}
+
+            - name: Atomic Deploy
+              run: |
+                 ssh ${{ secrets.USERNAME }}@${{ secrets.HOST }} << EOF
+                    whoami
+                 EOF
