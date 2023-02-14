@@ -1,3 +1,5 @@
+## Création du pipeline de déploiement continu
+
 name: Pipeline-CD
 on:
     push:
@@ -7,12 +9,12 @@ jobs:
         runs-on: ubuntu-latest
         continue-on-error: false
         steps:
-            - name: Load private SSH key
-              uses: webfactory/ssh-agent@v0.5.3
+            - uses: actions/checkout@v2
+            - name: Deploy Over SSH
+              uses: appleboy/ssh-action@master
               with:
-                  ssh-private-key: ${{ secrets.SSH_USER }}
-            - name: Atomic Deploy
-              run: |
-                  ssh ${{ secrets.SSH_USER }}${{ secrets.SSH_HOST }} << EOF
-                    whoami
-                  EOF
+                host: ${{ secrets.SSH_HOST }}
+                username: ${{ secrets.SSH_USER }}
+                key: ${{ secrets.SSH_PRIVATE_KEY }}
+                port: ${{ secrets.SSH_PORT }}
+                script: ls
