@@ -8,11 +8,13 @@ jobs:
         continue-on-error: false
         steps:
             - uses: actions/checkout@v2
-            - name: Deploy Over SSH
-              uses: appleboy//ssh-action@v0.1.4
+            - name: Load private SSH key
+              uses: webfactory/ssh-agent@v0.5.3
               with:
-                host: ${{ secrets.SSH_HOST }}
-                username: ${{ secrets.SSH_USER }}
-                key: ${{ secrets.SSH_PRIVATE_KEY }}
-                port: ${{ secrets.SSH_PORT }}
-                script: whoami
+                ssh-private-key: ${{ secrets. secrets.KEY }}
+
+            - name: Atomic Deploy
+              run: |
+                 ssh ${{ secrets.USERNAME }}@${{ secrets.HOST }} << EOF
+                    whoami
+                 EOF
