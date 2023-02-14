@@ -1,0 +1,18 @@
+name: Pipeline-CD
+on:
+    push:
+        branches: [ develop ]
+jobs:
+    cd:
+        runs-on: ubuntu-latest
+        continue-on-error: false
+        steps:
+            - uses: actions/checkout@v2
+            - name: Deploy Over SSH
+              uses: appleboy//ssh-action@v0.1.7
+              with:
+                host: ${{ secrets.SSH_HOST }}
+                username: ${{ secrets.SSH_USER }}
+                key: ${{ secrets.SSH_PRIVATE_KEY }}
+                port: ${{ secrets.SSH_PORT }}
+                script: whoami
