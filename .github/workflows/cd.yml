@@ -17,4 +17,6 @@ jobs:
                 username: ${{ secrets.SSH_USER }}
                 key: ${{ secrets.SSH_PRIVATE_KEY }}
                 port: ${{ secrets.SSH_PORT }}
-                script: ls
+                script: |
+                    cd ameliedev
+                    git pull
