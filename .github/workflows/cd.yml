@@ -22,5 +22,7 @@ jobs:
                 script: |
                     cd ameliedev/Site-ameliedev.fr
                     git pull
-                    sudo docker build -t app .
-                    sudo docker run app
+                    cd frontend
+                    yarn
+                    yarn build
+                    yarn start
