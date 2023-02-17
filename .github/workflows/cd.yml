@@ -22,3 +22,7 @@ jobs:
                 script: |
                     cd ameliedev/Site-ameliedev.fr
                     git pull
+                    cd frontend
+                    yarn
+                    yarn build
+                    yarn start
