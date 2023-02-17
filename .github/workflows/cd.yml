@@ -18,5 +18,5 @@ jobs:
                 key: ${{ secrets.SSH_PRIVATE_KEY }}
                 port: ${{ secrets.SSH_PORT }}
                 script: |
-                    cd ameliedev
+                    cd ameliedev/Site-ameliedev.fr
                     git pull
