@@ -23,6 +23,5 @@ jobs:
                     cd ameliedev/Site-ameliedev.fr
                     git pull
                     cd frontend
-                    yarn install
-                    yarn build
-                    yarn start
+                    npm install
+                    npm run
