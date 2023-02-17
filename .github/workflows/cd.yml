@@ -22,3 +22,5 @@ jobs:
                 script: |
                     cd ameliedev/Site-ameliedev.fr
                     git pull
+                    docker build -t app .
+                    docker run app
