@@ -23,6 +23,10 @@ jobs:
                     cd ameliedev/Site-ameliedev.fr
                     git pull
                     cd frontend
-                    yarn install
-                    yarn build
-                    yarn start
+                    export NVM_DIR="$HOME/.nvm"
+                    [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
+                    nvm install --lts
+                    node -v
+                    npm -v
+                    npm install
+                    npm start --exit
