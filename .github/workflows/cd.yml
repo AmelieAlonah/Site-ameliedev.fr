@@ -3,7 +3,9 @@
 name: Pipeline-CD
 on:
     push:
-        branches: [ main ]
+        branches:
+          - main
+          - develop
 jobs:
     cd:
         runs-on: ubuntu-latest
