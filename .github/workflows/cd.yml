@@ -22,7 +22,7 @@ jobs:
                 script: |
                     cd ameliedev/Site-ameliedev.fr
                     git pull
-                    composer install --no-dev --optimize-autoloader
+                    composer install --optimize-autoloader
                     npm install --production
                     npm run build
                     php bin/console cache:clear
