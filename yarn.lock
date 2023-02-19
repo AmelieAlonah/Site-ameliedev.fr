@@ -1168,6 +1168,22 @@
     "@radix-ui/react-primitive" "1.0.1"
     "@radix-ui/react-use-callback-ref" "1.0.0"
 
+"@radix-ui/react-hover-card@^1.0.3":
+  "integrity" "sha512-rr2+DxPlMhR57IPcNvZ85X8chytdfj7kyVToyR5Ge0r4IJEFiyPs0Cs8/K8oe5zt+yo0F8f29vtC8tNNK+ZIkA=="
+  "resolved" "https://registry.npmjs.org/@radix-ui/react-hover-card/-/react-hover-card-1.0.3.tgz"
+  "version" "1.0.3"
+  dependencies:
+    "@babel/runtime" "^7.13.10"
+    "@radix-ui/primitive" "1.0.0"
+    "@radix-ui/react-compose-refs" "1.0.0"
+    "@radix-ui/react-context" "1.0.0"
+    "@radix-ui/react-dismissable-layer" "1.0.2"
+    "@radix-ui/react-popper" "1.1.0"
+    "@radix-ui/react-portal" "1.0.1"
+    "@radix-ui/react-presence" "1.0.0"
+    "@radix-ui/react-primitive" "1.0.1"
+    "@radix-ui/react-use-controllable-state" "1.0.0"
+
 "@radix-ui/react-icons@^1.2.0":
   "integrity" "sha512-NqrZxn+Ig6c6MypUt84/Nab9WBFXH75T1mhEhFjPlIYaNkp113pqlo6QdK5r7zb3b7RckDAPgUQACes0aKwcFA=="
   "resolved" "https://registry.npmjs.org/@radix-ui/react-icons/-/react-icons-1.2.0.tgz"
