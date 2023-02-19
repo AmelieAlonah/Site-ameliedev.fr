@@ -13,7 +13,9 @@ jobs:
         steps:
             - uses: actions/checkout@v2
             - name: Deploy Over SSH
-              uses: appleboy/ssh-action@v0.1.7
+              uses: |
+                appleboy/ssh-action@v0.1.7
+                borales/actions-yarn@v4
               with:
                 host: ${{ secrets.SSH_HOST }}
                 username: ${{ secrets.SSH_USER }}
@@ -32,4 +34,3 @@ jobs:
                     composer dump-env prod
 #                    php bin/console doctrine:create:database --if-not-exists
 #                    php bin/console doctrine:migrations:migrate --no-interaction
-
