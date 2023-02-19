@@ -23,6 +23,9 @@ jobs:
                     cd ameliedev/Site-ameliedev.fr
                     git pull
                     composer install --optimize-autoloader
+                    export NVM_DIR=~/.nvm
+                    source ~/.nvm/nvm.sh
+                    npm --help
                     npm install
                     npm run build
                     php bin/console cache:clear
@@ -30,6 +33,5 @@ jobs:
                     APP_ENV=prod
                     APP_DEBUG=0
                     composer dump-env prod
-            - uses: borales/actions-yarn@v4
 #                    php bin/console doctrine:create:database --if-not-exists
 #                    php bin/console doctrine:migrations:migrate --no-interaction
