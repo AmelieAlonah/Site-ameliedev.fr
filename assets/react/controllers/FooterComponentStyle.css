@@ -1,0 +1,26 @@
+@import '../../../node_modules/@radix-ui/colors/violet.css';
+
+.Footer {
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+}
+
+.SeparatorRoot {
+    background-color: var(--violet6);
+}
+.SeparatorRoot[data-orientation='horizontal'] {
+    height: 1px;
+    width: 100%;
+}
+.SeparatorRoot[data-orientation='vertical'] {
+    height: 100%;
+    width: 1px;
+}
+
+.Text {
+    color: white;
+    font-size: 15px;
+    line-height: 20px;
+    text-decoration: none;
+}

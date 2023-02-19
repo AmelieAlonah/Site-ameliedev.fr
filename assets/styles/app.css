@@ -1,3 +1,7 @@
 body {
     background-color: var(--color-primary-dark);
 }
+
+.main {
+    min-height: 80vh;
+}

@@ -24,6 +24,10 @@
         {% endblock %}
     </head>
     <body>
-        {% block body %}{% endblock %}
+        <header {{ react_component('NavigationComponent') }}></header>
+        <main class="main">
+            {% block body %}{% endblock %}
+        </main>
+        <footer {{ react_component('FooterComponent') }}></footer>
     </body>
 </html>
