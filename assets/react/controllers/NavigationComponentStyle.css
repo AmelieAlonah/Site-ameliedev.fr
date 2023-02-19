@@ -1,8 +1,8 @@
-@import '@radix-ui/colors/blackA.css';
-@import '@radix-ui/colors/indigo.css';
-@import '@radix-ui/colors/mauve.css';
-@import '@radix-ui/colors/purple.css';
-@import '@radix-ui/colors/violet.css';
+@import '../../../node_modules/@radix-ui/colors/blackA.css';
+@import '../../../node_modules/@radix-ui/colors/indigo.css';
+@import '../../../node_modules/@radix-ui/colors/mauve.css';
+@import '../../../node_modules/@radix-ui/colors/purple.css';
+@import '../../../node_modules/@radix-ui/colors/violet.css';
 
 /* reset */
 button,
@@ -14,7 +14,8 @@ p {
     position: relative;
     display: flex;
     justify-content: center;
-    width: 100vw;
+    max-width: 90vw;
+    margin: auto;
     z-index: 1;
 }
 
@@ -73,8 +74,8 @@ p {
     position: absolute;
     top: 0;
     left: 0;
-    width: 100%;
-    margin: 8px;
+    min-width: 90%;
+    padding: 8px;
     animation-duration: 250ms;
     animation-timing-function: ease;
 }
@@ -138,19 +139,21 @@ p {
 }
 
 .List {
+    min-width: 35vw;
+    max-width: 75vw;
     display: grid;
     padding: 22px;
     margin: 0;
-    column-gap: 10px;
+    column-gap: 8px;
     list-style: none;
 }
 @media only screen and (min-width: 600px) {
     .List.one {
-        width: 500px;
+        width: 50%;
         grid-template-columns: 0.75fr 1fr;
     }
     .List.two {
-        width: 600px;
+        width: 50%;
         grid-auto-flow: column;
         grid-template-rows: repeat(3, 1fr);
     }
