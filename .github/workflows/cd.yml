@@ -23,8 +23,8 @@ jobs:
                     cd ameliedev/Site-ameliedev.fr
                     git pull
                     composer install --optimize-autoloader
-                    npm install --production
-                    npm run build
+                    yarn --production
+                    yarn build
                     php bin/console cache:clear
                     php bin/console cache:warmup
                     APP_ENV=prod
