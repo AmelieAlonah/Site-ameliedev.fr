@@ -31,7 +31,7 @@ jobs:
             - uses: borales/actions-yarn@v4
               name: Install dependencies
               with:
-                script: |
+                cmd: |
                     yarn --production
                     yarn build
 #                    php bin/console doctrine:create:database --if-not-exists
