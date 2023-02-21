@@ -159,6 +159,11 @@ p {
     }
 }
 
+.ListItem {
+    display: flex;
+    align-items: center;
+}
+
 .ListItemLink {
     display: block;
     outline: none;

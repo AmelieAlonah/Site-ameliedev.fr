@@ -1,4 +1,4 @@
-@import '../../../node_modules/@radix-ui/colors/violet.css';
+@import '@radix-ui/colors/violet.css';
 
 .Footer {
     display: flex;
