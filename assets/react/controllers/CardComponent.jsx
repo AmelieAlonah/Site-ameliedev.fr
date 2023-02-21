@@ -3,7 +3,7 @@ import * as HoverCard from '@radix-ui/react-hover-card';
 import PPAlonah from '../../images/pp-alonah.png';
 import './CardComponentStyle.css';
 
-const HoverCardDemo = () => (
+const Card = () => (
     <HoverCard.Root>
         <HoverCard.Trigger asChild>
             <a
@@ -58,4 +58,4 @@ const HoverCardDemo = () => (
     </HoverCard.Root>
 );
 
-export default HoverCardDemo;
+export default Card;
