@@ -54,6 +54,10 @@ php bin/console doctrine:migrations:migrate --no-interaction
 symfony serve
 ```
 
+```bash
+npm run watch
+```
+
 ## Lancement des tests
 
 ```bash

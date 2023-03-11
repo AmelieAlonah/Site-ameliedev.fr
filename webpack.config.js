@@ -14,6 +14,8 @@ Encore
     // only needed for CDN's or subdirectory deploy
     //.setManifestKeyPrefix('build/')
 
+
+
     /*
      * ENTRY CONFIG
      *
@@ -21,6 +23,7 @@ Encore
      * and one CSS file (e.g. app.css) if your JavaScript imports CSS.
      */
     .addEntry('app', './assets/app.js')
+    .addEntry('exception', './assets/styles/Exception/error.js')
 
     // enables the Symfony UX Stimulus bridge (used in assets/bootstrap.js)
     .enableStimulusBridge('./assets/controllers.json')
@@ -31,6 +34,19 @@ Encore
     // will require an extra script tag for runtime.js
     // but, you probably want this, unless you're building a single-page app
     .enableSingleRuntimeChunk()
+
+    .copyFiles({
+        from: './assets/images',
+
+        // optional target path, relative to the output dir
+        to: 'images/',
+
+        // if versioning is enabled, add the file hash too
+        to: 'images/[path][name].[hash:8].[ext]',
+
+        // only copy files matching this pattern
+        pattern: /\.(png|jpg|jpeg|svg)$/
+    })
 
     /*
      * FEATURE CONFIG

@@ -1,0 +1,12 @@
+h1 {
+    color: var(--color-white);
+}
+
+img {
+    width: 50%;
+    height: 50%;
+}
+
+blockquote {
+    text-align: center;
+}
