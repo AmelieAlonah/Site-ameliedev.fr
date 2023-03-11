@@ -1,0 +1,25 @@
+{% extends 'base.html.twig' %}
+{% block metasDescription %}“Ma philosophie est simple : difficile de se perdre quand on ne sait pas où on va.” - Jim JarmuschDe Jim Jarmusch / L'Express - 22 Février 1996{% endblock %}
+{% block AddStylesheets %}
+    {{ encore_entry_link_tags('exception') }}
+{% endblock %}
+
+{% block title %}Oups, on est perdu...{% endblock %}
+
+{% block body %}
+<div class="text-3">
+    <h1>Page introuvable</h1>
+    <p>La page que vous recherchez n'existe pas ou plus.</p>
+    <p>Vous pouvez retourner à l'<a href="{{ path('home_page') }}">accueil</a> ou utiliser le menu pour naviguer sur le site.</p>
+    <p class="d-flex-center m-3"><img src="{{ asset('build/images/404.svg')}}" alt="404"/></p>
+    <figure>
+        <blockquote class="quote text-5">
+            "All that is gold does not glitter, Not all those who wander are lost"
+        </blockquote>
+        <figcaption>Tolkien
+            <cite>the fellowship of the ring - Tome 1</cite>
+        </figcaption>
+    </figure>
+</div>
+
+{% endblock %}
